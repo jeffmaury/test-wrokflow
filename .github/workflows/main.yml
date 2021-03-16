@@ -15,5 +15,9 @@ jobs:
           script: |
             console.log(JSON.stringify)
             console.log(${{github.event}})
+            var e = ${{github.event}}
+            for(var s in e) {
+              console.log(s + ' ' + e[s])
+            }
             console.log(${{github.event.workflow_run.id}})
         
