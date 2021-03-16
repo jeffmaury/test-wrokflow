@@ -13,5 +13,5 @@ jobs:
         uses: actions/github-script@v3.1.0
         with:
           script: |
-            console.log('${github.event}')
+            console.log('${{github.event}}')
         
