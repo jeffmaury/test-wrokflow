@@ -1,0 +1,17 @@
+name: Publish reports
+
+on:
+  workflow_run:
+    workflows: ["Java CI with Gradle"]
+    types:
+      - completed
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dump
+        uses: actions/github-script@v3.1.0
+        with:
+          script: |
+            echo ${github.event}
+        
