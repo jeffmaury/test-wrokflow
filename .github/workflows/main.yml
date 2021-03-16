@@ -15,4 +15,5 @@ jobs:
           script: |
             console.log(JSON.stringify)
             console.log(${{github.event}})
+            console.log(${{github.event.workflow_run.id}})
         
