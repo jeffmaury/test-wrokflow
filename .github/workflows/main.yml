@@ -13,11 +13,11 @@ jobs:
         uses: actions/github-script@v3.1.0
         with:
           script: |
-            console.log(JSON.stringify)
-            console.log(${{github.event}})
-            var e = ${{github.event}}
+            console.log(JSON.stringify);
+            console.log(${{github.event}});
+            var e = ${{github.event}};
             for(var s in e) {
               console.log(s + ' ' + e[s])
-            }
-            console.log(${{github.event.workflow_run.id}})
+            };
+            console.log(${{github.event.workflow_run.id}});
         
