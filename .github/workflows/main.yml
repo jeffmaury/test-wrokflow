@@ -18,4 +18,5 @@ jobs:
             console.log(${{github.event.repository}});
             console.log(${{github.event.sender}});
             console.log(${{github.event.workflow_run.id}});
+            console.log(${{github.event.workflow_run.head_sha}});
         
