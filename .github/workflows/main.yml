@@ -13,7 +13,7 @@ jobs:
         uses: actions/github-script@v3.1.0
         with:
           script: |
-            console.log(${{github.event}});
+            console.log(JSON.stringify(${{github.event}}));
             var e = ${{github.event}};
             for(var s in e) {
               console.log(s + ' ' + e[s])
