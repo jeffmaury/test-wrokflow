@@ -13,7 +13,7 @@ jobs:
         uses: actions/github-script@v3.1.0
         with:
           script: |
-            console.log(${{github.event.action}});
+            console.log('${{github.event.action}}');
             console.log(${{github.event.organization}});
             console.log(${{github.event.repository}});
             console.log(${{github.event.sender}});
